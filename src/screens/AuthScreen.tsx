@@ -218,6 +218,14 @@ export default function AuthScreen() {
               style={styles.headerImage}
               resizeMode="contain"
             />
+            {/* Tagline Pill Badge: CONNECT • SHARE • BELONG */}
+            <View style={styles.taglineBadge}>
+              <Text style={styles.taglineText}>CONNECT</Text>
+              <View style={styles.taglineDot} />
+              <Text style={styles.taglineText}>SHARE</Text>
+              <View style={styles.taglineDot} />
+              <Text style={styles.taglineText}>BELONG</Text>
+            </View>
           </View>
 
           {/* Card Container with Dynamic Shadow Layer */}
@@ -337,6 +345,37 @@ const styles = StyleSheet.create({
   headerImage: {
     width: 270,
     height: 116,
+  },
+  taglineBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: COLORS.WHITE,
+    borderWidth: 1.5,
+    borderColor: COLORS.PURPLE_BORDER,
+    borderRadius: 999,
+    paddingVertical: 5,
+    paddingHorizontal: 16,
+    marginTop: -8,
+    shadowColor: COLORS.CARD_SHADOW,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.08,
+    shadowRadius: 6,
+    elevation: 2,
+    alignSelf: 'center',
+  },
+  taglineText: {
+    fontSize: 11,
+    fontWeight: '800',
+    color: COLORS.TEXT_PRIMARY,
+    letterSpacing: 1.2,
+  },
+  taglineDot: {
+    width: 4,
+    height: 4,
+    borderRadius: 2,
+    backgroundColor: COLORS.PURPLE_LIGHT,
+    marginHorizontal: 8,
   },
   cardWrapper: {
     position: 'relative',
